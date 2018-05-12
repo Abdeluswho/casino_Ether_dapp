@@ -17,6 +17,9 @@ contract Casino {
    // The address of the player and => the user info   
    mapping(address => Player) public playerInfo;
 
+   // Fallback function in case someone sends ether to the contract so it doesn't get lost
+   function() public payable {}
+
 
    function Casino(uint256 _minBet) public {
       owner = msg.sender;
@@ -36,6 +39,10 @@ contract Casino {
       }
       return false;
    }
+
+   function resetData() {
+        
+    }
 
     // To bet for a number between 1 and 10
    function bet(uint256 numberSelected) public payable {
@@ -75,17 +82,21 @@ contract Casino {
          // Delete all the players
          delete playerInfo[playerAddress]; 
       }
+    
 
       // Delete all the players array
-      players.length = 0; 
+        players.length = 0; 
       // How much each winner gets
       uint256 winnerEtherAmount = totalBet / winners.length;
+      
 
       for (uint256 j = 0; j < count; j++) {
         // Check that the address in this fixed array is not empty
          if (winners[j] != address(0)) 
          winners[j].transfer(winnerEtherAmount);
       }
+      totalBet = 0;
+      numberOfBets = 0;
    }
 }
 
