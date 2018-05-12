@@ -1,0 +1,33 @@
+{
+  "name": "casino_Ether_dapp",
+  "version": "1.0.0",
+  "description": "fully decentralized application - Web3 - ReactJS - NodeJS - Solidity  and Truffle to deploy, test and compile our contracts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdeluswho/casino_Ether_dapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdeluswho/casino_Ether_dapp/issues"
+  },
+  "homepage": "https://github.com/Abdeluswho/casino_Ether_dapp#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "json-loader": "^0.5.7",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "style-loader": "^0.21.0",
+    "web3": "^1.0.0-beta.34",
+    "webpack": "^4.8.2"
+  }
+}
